@@ -3,7 +3,7 @@
   "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
   "rules": {
     "prettier/prettier": true,
-    "rule-empty-line-before": "always",
+    "rule-empty-line-before": "off",
     "order/properties-order": [
       {
         "groupName": "special",
@@ -248,8 +248,8 @@
       }
     ],
     "at-rule-no-unknown": null,
-    "block-closing-brace-newline-before": "always",
     "declaration-empty-line-before": null,
+    "declaration-property-value-no-unknown": true,
     "scss/at-rule-no-unknown": true,
     "scss/selector-no-redundant-nesting-selector": true
   }
