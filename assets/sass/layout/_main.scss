@@ -6,12 +6,17 @@
 
 /* Main */
 
-	#main {
-		@include padding(4em, 0);
+@font-face {
+  font-family: "Abel";
+  src: url(../webfonts/Abel-Regular.ttf);
+}
 
-		// Small.
-			@include breakpoint('<=small') {
-				@include padding(3em, 0);
-			}
+#main {
+  @include padding(4em, 0);
 
-	}
+  // Small.
+  @include breakpoint("<=small") {
+    @include padding(3em, 0);
+  }
+}
+

@@ -6,145 +6,188 @@
 
 /* Image */
 
-	.image {
-		border-radius: _size(border-radius);
-		border: 0;
-		display: inline-block;
-		position: relative;
-		overflow: hidden;
+.image {
+  position: relative;
 
-		img {
-			border-radius: _size(border-radius);
-			display: block;
-		}
+  display: inline-block;
+  overflow: hidden;
 
-		&.left,
-		&.right {
-			max-width: 40%;
+  border: 0;
+  border-radius: _size(border-radius);
 
-			img {
-				width: 100%;
-			}
-		}
+  img {
+    display: block;
 
-		&.left {
-			float: left;
-			margin: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
+    border-radius: _size(border-radius);
+  }
 
-		&.right {
-			float: right;
-			margin: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
+  &.left,
+  &.right {
+    max-width: 40%;
 
-		&.fit {
-			display: block;
-			margin: 0 0 _size(element-margin) 0;
-			width: 100%;
+    img {
+      width: 100%;
+    }
+  }
 
-			img {
-				width: 100%;
-			}
-		}
+  &.left {
+    top: 0.25em;
 
-		&.main {
-			display: block;
-			margin: 0 0 (_size(element-margin) * 1.5) 0;
-			width: 100%;
+    float: left;
+    margin: 0 1.5em 1em 0;
+  }
 
-			img {
-				width: 100%;
-			}
-		}
+  &.right {
+    top: 0.25em;
 
-		&.phone {
-			box-shadow: none;
-			border-radius: 0;
-			margin: 0 0 (_size(element-margin) * 1.5) 0;
-			width: 13em;
+    float: right;
+    margin: 0 0 1em 1.5em;
+  }
 
-			img {
-				border-radius: 0;
-				display: block;
-				position: relative;
-				width: 100%;
-			}
+  &.fit {
+    display: block;
+    width: 100%;
+    margin: 0 0 _size(element-margin) 0;
 
-			.inner, &:before, &:after {
-				display: block;
-				border: solid (_size(border-width) * 2) _palette(accent1, border);
-			}
+    img {
+      width: 100%;
+    }
+  }
 
-			.inner {
-				position: relative;
+  &.main {
+    display: block;
+    width: 100%;
+    margin: 0 0 (_size(element-margin) * 1.5) 0;
 
-				&:before, &:after {
-					content: '';
-					position: absolute;
-					left: 50%;
-				}
+    img {
+      width: 100%;
+    }
+  }
 
-				&:before {
-					top: -1.375em;
-					margin-left: -1em;
-					width: 2em;
-					height: 0.25em;
-					border-radius: 0.5em;
-					background: _palette(accent1, border);
-				}
+  &.phone {
+    width: 13rem;
+    margin: 0 0 (_size(element-margin) * 1.5) 0;
 
-				&:after {
-					bottom: -2.75em;
-					margin-left: -1em;
-					width: 2em;
-					height: 2em;
-					border-radius: 100%;
-					border: solid (_size(border-width) * 2) _palette(accent1, border);
-				}
-			}
+    border-radius: 0;
+    box-shadow: none;
 
-			&:before, &:after {
-				content: '';
-			}
+    .icon {
+      color: white;
+      font-size: 4rem;
+    }
 
-			&:before {
-				height: 2.5em;
-				border-radius: 1em 1em 0 0;
-				border-bottom: 0;
-			}
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
 
-			&:after {
-				height: 3.5em;
-				border-radius: 0 0 1em 1em;
-				border-top: 0;
-			}
-		}
-	}
+    @media screen and (width <= 736px) and (orientation: landscape) {
+      .icon {
+        color: white;
+        font-size: 3rem;
+      }
 
-	@mixin color-image($p: null) {
-		.image {
-			box-shadow: 0 0 0 4px _palette($p, bg), 0 0 0 5px _palette($p, border);
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 300px;
+      }
+      .container .icon.fa-exchange-alt {
+        color: red;
+      }
+    }
 
-			&.phone {
-				box-shadow: none;
+    .inner,
+    &:before,
+    &:after {
+      display: block;
 
-				.inner, &:before, &:after {
-					border-color: _palette($p, border);
-				}
+      border: solid (_size(border-width) * 2) _palette(accent1, border);
+    }
 
-				.inner {
-					&:before {
-						background: _palette($p, border);
-					}
+    .inner {
+      position: relative;
 
-					&:after {
-						border-color: _palette($p, border);
-					}
-				}
-			}
-		}
-	}
+      &:before,
+      &:after {
+        content: "";
 
-	@include color-image;
+        position: absolute;
+        left: 50%;
+      }
+
+      &:before {
+        top: -1.375em;
+
+        width: 2em;
+        height: 0.25em;
+        margin-left: -1em;
+
+        background: _palette(accent1, border);
+        border-radius: 0.5em;
+      }
+
+      &:after {
+        bottom: -2.75em;
+
+        width: 2em;
+        height: 2em;
+        margin-left: -1em;
+
+        border: solid (_size(border-width) * 2) _palette(accent1, border);
+        border-radius: 100%;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+    }
+
+    &:before {
+      height: 2.5em;
+
+      border-bottom: 0;
+      border-radius: 1em 1em 0 0;
+    }
+
+    &:after {
+      height: 3.5em;
+
+      border-top: 0;
+      border-radius: 0 0 1em 1em;
+    }
+  }
+}
+
+@mixin color-image($p: null) {
+  .image {
+    box-shadow:
+      0 0 0 4px _palette($p, bg),
+      0 0 0 5px _palette($p, border);
+
+    &.phone {
+      box-shadow: none;
+
+      .inner,
+      &:before,
+      &:after {
+        border-color: _palette($p, border);
+      }
+
+      .inner {
+        &:before {
+          background: _palette($p, border);
+        }
+
+        &:after {
+          border-color: _palette($p, border);
+        }
+      }
+    }
+  }
+}
+
+@include color-image;

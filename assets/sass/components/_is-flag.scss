@@ -1,0 +1,56 @@
+ul.icons li .icon.fa-slash::before {
+  transform: rotateZ(142deg);
+}
+
+#israel-flag {
+  display: flex;
+  flex-direction: column;
+
+  transform: translateY(-33%);
+}
+
+#israel-flag span {
+  display: block;
+}
+
+#israel-flag .fa-star-of-david::before {
+  font-size: 1.3rem;
+}
+
+#israel-flag span:first-of-type {
+  transform: translateY(1rem);
+}
+
+#israel-flag span:last-of-type {
+  transform: translateY(-0.6rem);
+}
+
+@media screen and (max-width: 980px) {
+  #israel-flag .fa-star-of-david::before {
+    font-size: 1rem;
+  }
+
+  #israel-flag span:first-of-type {
+    transform: translateY(1rem);
+  }
+
+  #israel-flag span:last-of-type {
+    transform: translateY(-0.8rem);
+  }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  #israel-flag .fa-star-of-david::before {
+    font-size: 1rem;
+  }
+
+  #israel-flag span:first-of-type {
+    transform: translateY(1rem);
+  }
+
+  #israel-flag span:last-of-type {
+    transform: translateY(-0.9rem);
+  }
+}
+
+
