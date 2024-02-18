@@ -1,9 +1,8 @@
 {
-  "extends": ["stylelint-prettier/recommended"],
-  "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
+  "extends": ["stylelint-prettier/recommended", "stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
   "syntax": "scss",
   "rules": {
-    "prettier/prettier": true,
     "rule-empty-line-before": "off",
     "order/properties-order": [
       {
@@ -250,8 +249,14 @@
     ],
     "at-rule-no-unknown": null,
     "declaration-empty-line-before": null,
-    "declaration-property-value-no-unknown": true,
+    "declaration-property-value-no-unknown": false,
+    "no-invalid-position-at-import-rule": [true, { "ignoreAtRules": ["/mixin/", "include"] }],
     "scss/at-rule-no-unknown": true,
-    "scss/selector-no-redundant-nesting-selector": true
+    "scss/function-no-unknown": false,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/at-mixin-parentheses-space-before": "never",
+    "scss/at-mixin-argumentless-call-parentheses": null,
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/at-mixin-pattern": null
   }
 }
