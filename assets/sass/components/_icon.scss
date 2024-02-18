@@ -8,8 +8,9 @@
 
 .icon {
   @include icon;
-  border-bottom: none;
   position: relative;
+
+  border-bottom: none;
 
   > .label {
     display: none;
@@ -30,6 +31,11 @@
       font-family: "Font Awesome 5 Brands";
     }
   }
+}
+
+#header .phone .icon {
+  color: #ffffff;
+  font-size: 4rem;
 }
 
 @mixin color-icon($p: null) {

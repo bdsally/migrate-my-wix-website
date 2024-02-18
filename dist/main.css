@@ -8166,6 +8166,10 @@ input[type="checkbox"]:focus + label:before, input[type="radio"]:focus + label:b
   font-family: "Font Awesome 5 Brands";
 }
 
+#header .phone .icon {
+  color: #fff;
+}
+
 .icon {
   color: #e0e0e0;
 }

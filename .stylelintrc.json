@@ -1,6 +1,7 @@
 {
   "extends": ["stylelint-prettier/recommended"],
   "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
+  "syntax": "scss",
   "rules": {
     "prettier/prettier": true,
     "rule-empty-line-before": "off",
@@ -254,4 +255,3 @@
     "scss/selector-no-redundant-nesting-selector": true
   }
 }
-
