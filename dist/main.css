@@ -8168,6 +8168,7 @@ input[type="checkbox"]:focus + label:before, input[type="radio"]:focus + label:b
 
 #header .phone .icon {
   color: #fff;
+  font-size: 4rem;
 }
 
 .icon {
@@ -8234,18 +8235,21 @@ input[type="checkbox"]:focus + label:before, input[type="radio"]:focus + label:b
   margin: 0 0 3em;
 }
 
-.image.phone .icon {
-  color: #fff;
-  font-size: 4rem;
-}
-
 .image.phone .container {
   justify-content: space-evenly;
   align-items: center;
+  height: 100px;
   display: flex;
 }
 
 @media screen and (width <= 736px) and (orientation: landscape) {
+  .image.phone .container {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    display: flex;
+  }
+
   .image.phone .icon {
     color: #fff;
     font-size: 3rem;
@@ -8254,7 +8258,6 @@ input[type="checkbox"]:focus + label:before, input[type="radio"]:focus + label:b
   .image.phone .container {
     justify-content: space-evenly;
     align-items: center;
-    height: 300px;
     display: flex;
   }
 
@@ -9654,7 +9657,8 @@ table.alt tbody tr td {
   }
 
   #header .image {
-    width: 15em;
+    width: -moz-fit-content;
+    width: fit-content;
     max-width: 20vw;
     font-size: .8em;
   }

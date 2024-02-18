@@ -9,7 +9,7 @@
 #header {
   @include color(accent1);
   @include padding(4.5em, 0);
-  @include vendor("align-items", "center");
+  @include vendor("align-items", "center"); // prettier-ignore
   @include vendor("display", "flex");
   @include vendor("justify-content", "center");
   height: 90vh;
@@ -106,6 +106,7 @@
   }
 
   // Small.
+  // prettier-ignore-start
   @include breakpoint("<=small") {
     background-image: url("../css/images/overlay.png"), url("../css/images/pattern-size3.svg");
 
@@ -116,7 +117,7 @@
     p {
       font-size: 1em;
       line-height: inherit;
-    }
+    } // prettier-ignore-end
 
     // Landscape.
     @include orientation(landscape) {
@@ -127,7 +128,7 @@
       }
 
       .image {
-        width: 15em;
+        width: fit-content;
         max-width: 20vw;
 
         font-size: 0.8em;
