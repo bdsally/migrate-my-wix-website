@@ -71,17 +71,21 @@
     border-radius: 0;
     box-shadow: none;
 
-    .icon {
-      color: white;
-      font-size: 4rem;
-    }
-
     .container {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      height: 100px;
     }
 
+    @media screen and (width <= 736px) and (orientation: landscape) {
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100px;
+      }
+    }
     @media screen and (width <= 736px) and (orientation: landscape) {
       .icon {
         color: white;
@@ -92,8 +96,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        height: 300px;
       }
+
       .container .icon.fa-exchange-alt {
         color: red;
       }
